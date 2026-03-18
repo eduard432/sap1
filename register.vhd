@@ -19,7 +19,6 @@ architecture bh of register is
     signal Q_temp: std_logic_vector(bits - 1 downto 0);
 begin
 
-    -- 🔹 Registro (almacenamiento)
     process(clk)
     begin
         if rising_edge(clk) then
