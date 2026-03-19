@@ -16,6 +16,7 @@ end entity clock;
 
 architecture bh of clock is
     signal new_clock: std_logic := '0';
+	 signal selected_clk: std_logic;
 begin
     process(clk)
         variable count: integer := 0;
@@ -25,13 +26,13 @@ begin
             if(count = pulse) then
                 new_clock <= not new_clock;
                 count := 0;
-            else 
-                new_clock <= '0';
             end if;
         end if;
     end process;
 
-    clk_out <= (new_clock when sel = '1' else manual_clk)
-           when HLT = '0' else '0';
+	selected_clk <= new_clock when sel = '1' else manual_clk;
+
+	clk_out <= selected_clk when HLT = '0' else '0';
+	
 
 end architecture bh;

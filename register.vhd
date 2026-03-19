@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity register is
+entity regs is
     generic (
         bits: integer := 8
     );
@@ -15,7 +15,7 @@ entity register is
     );
 end entity;
 
-architecture bh of register is
+architecture bh of regs is
     signal Q_temp: std_logic_vector(bits - 1 downto 0);
 begin
 

@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
 
 entity program_counter is
     generic (
-        bits: integer := 4;
+        bits: integer := 4
     );
     port (
         clk: in std_logic;
@@ -33,5 +33,5 @@ begin
         end if;
     end process;
 
-    counter <= cnt_temp when CO '1' else (others => '0')
+    counter <= cnt_temp when CO = '1' else (others => '0');
 end architecture bh;
