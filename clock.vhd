@@ -16,7 +16,7 @@ end entity clock;
 
 architecture bh of clock is
     signal new_clock: std_logic := '0';
-	 signal selected_clk: std_logic;
+	signal selected_clk: std_logic;
 begin
     process(clk)
         variable count: integer := 0;
