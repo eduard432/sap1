@@ -15,7 +15,7 @@ entity program_counter is
         data_in: in std_logic_vector(bits - 1 downto 0);
         counter: out std_logic_vector(bits - 1 downto 0)
     );
-end entity;
+end entity program_counter;
 
 architecture bh of program_counter is
     signal cnt_temp: std_logic_vector(bits - 1 downto 0) := (others => '0');
@@ -33,5 +33,5 @@ begin
         end if;
     end process;
 
-    counter <= cnt_temp when CO = '1' else (others => '0');
+    counter <= cnt_temp when CO = '1' else (others => 'Z');
 end architecture bh;

@@ -59,29 +59,22 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_P11 -to clk
 
-set_location_assignment PIN_A8 -to out_leds[0]
-set_location_assignment PIN_A9 -to out_leds[1]
-set_location_assignment PIN_A10 -to out_leds[2]
-set_location_assignment PIN_B10 -to out_leds[3]
-set_location_assignment PIN_D13 -to out_leds[4]
-set_location_assignment PIN_C13 -to out_leds[5]
-set_location_assignment PIN_E14 -to out_leds[6]
-set_location_assignment PIN_D14 -to out_leds[7]
+set_location_assignment PIN_A8 -to counter[0]
+set_location_assignment PIN_A9 -to counter[1]
+set_location_assignment PIN_A10 -to counter[2]
+set_location_assignment PIN_B10 -to counter[3]
 
-set_location_assignment PIN_A11 -to clk_out
 
-set_location_assignment PIN_B8 -to clear
-set_location_assignment PIN_A7 -to WE
+set_location_assignment PIN_D13 -to clk_out
 
-set_location_assignment PIN_C10 -to I[0]
-set_location_assignment PIN_C11 -to I[1]
-set_location_assignment PIN_D12 -to I[2]
-set_location_assignment PIN_C12 -to I[3]
-set_location_assignment PIN_A12 -to I[4]
-set_location_assignment PIN_B12 -to I[5]
-set_location_assignment PIN_A13 -to I[6]
-set_location_assignment PIN_A14 -to I[7]
-set_location_assignment PIN_B14 -to OE
-set_location_assignment PIN_F15 -to sel_leds
+set_location_assignment PIN_B8 -to reset
+set_location_assignment PIN_A7 -to load
+
+set_location_assignment PIN_C10 -to data_in[0]
+set_location_assignment PIN_C11 -to data_in[1]
+set_location_assignment PIN_D12 -to data_in[2]
+set_location_assignment PIN_C12 -to data_in[3]
+set_location_assignment PIN_A12 -to CE
+set_location_assignment PIN_B12 -to CO
 
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
