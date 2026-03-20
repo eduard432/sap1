@@ -63,16 +63,16 @@ begin
     clk_out <= global_clk;
 
     A_REGSITER: regs
-    generic (
+    generic map (
         8
     )
-    port (
-        clk <= global_clk,
-        clear <= clear,
-        WE <= not WE,
-        OE <= OE,
-        I <= I,
-        Q <= temp_out_leds
+    port map (
+        clk => global_clk,
+        clear => not clear,
+        WE => not WE,
+        OE => OE,
+        I => I,
+        Q => temp_out_leds
     );
     
     out_leds <= temp_out_leds when sel_leds = '1' else I;
