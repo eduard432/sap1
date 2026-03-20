@@ -1,0 +1,190 @@
+# --------------------------------------------- #
+# CLOCKS: #
+# --------------------------------------------- #
+# 10MHZ: #
+set_location_assignment PIN_N5 -to clk
+# 50MHZ: #
+set_location_assignment PIN_P11 -to clk1
+set_location_assignment PIN_N14 -to clk2
+# --------------------------------------------- #
+
+# --------------------------------------------- #
+# PUSH BUTTONS #
+# --------------------------------------------- #
+set_location_assignment PIN_B8 -to b1
+set_location_assignment PIN_A7 -to b2
+# --------------------------------------------- #
+
+# --------------------------------------------- #
+# Slide Switches #
+# --------------------------------------------- #
+set_location_assignment PIN_C10 -to Slid_Switch[0]
+set_location_assignment PIN_C11 -to Slid_Switch[1]
+set_location_assignment PIN_D12 -to Slid_Switch[2]
+set_location_assignment PIN_C12 -to Slid_Switch[3]
+set_location_assignment PIN_A12 -to Slid_Switch[4]
+set_location_assignment PIN_B12 -to Slid_Switch[5]
+set_location_assignment PIN_A13 -to Slid_Switch[6]
+set_location_assignment PIN_A14 -to Slid_Switch[7]
+set_location_assignment PIN_B14 -to Slid_Switch[8]
+set_location_assignment PIN_F15 -to Slid_Switch[0]
+# --------------------------------------------- #
+
+# --------------------------------------------- #
+# LEDS #
+# --------------------------------------------- #
+set_location_assignment PIN_A8 -to LED[0]
+set_location_assignment PIN_A9 -to LED[1]
+set_location_assignment PIN_A10 -to LED[2]
+set_location_assignment PIN_B10 -to LED[3]
+set_location_assignment PIN_D13 -to LED[4]
+set_location_assignment PIN_C13 -to LED[5]
+set_location_assignment PIN_E14 -to LED[6]
+set_location_assignment PIN_D14 -to LED[7]
+set_location_assignment PIN_A11 -to LED[8]
+set_location_assignment PIN_B11 -to LED[9]
+# --------------------------------------------- #
+
+# --------------------------------------------- #
+# 7 segment #
+# --------------------------------------------- #
+# Display 0 ----------------------------------- #
+set_location_assignment PIN_C14 -to Seven_Segment_Digit_0[0] 
+set_location_assignment PIN_E15 -to Seven_Segment_Digit_0[1] 
+set_location_assignment PIN_C15 -to Seven_Segment_Digit_0[2] 
+set_location_assignment PIN_C16 -to Seven_Segment_Digit_0[3] 
+set_location_assignment PIN_E16 -to Seven_Segment_Digit_0[4] 
+set_location_assignment PIN_D17 -to Seven_Segment_Digit_0[5] 
+set_location_assignment PIN_C17 -to Seven_Segment_Digit_0[6] 
+set_location_assignment PIN_D15 -to Seven_Segment_Digit_0[7]
+# Display 1 ----------------------------------- #
+set_location_assignment PIN_C18 -to Seven_Segment_Digit_1[0] 
+set_location_assignment PIN_D18 -to Seven_Segment_Digit_1[1] 
+set_location_assignment PIN_E18 -to Seven_Segment_Digit_1[2] 
+set_location_assignment PIN_B16 -to Seven_Segment_Digit_1[3] 
+set_location_assignment PIN_A17 -to Seven_Segment_Digit_1[4] 
+set_location_assignment PIN_A18 -to Seven_Segment_Digit_1[5] 
+set_location_assignment PIN_B17 -to Seven_Segment_Digit_1[6] 
+set_location_assignment PIN_A16 -to Seven_Segment_Digit_1[7]
+# Display 2 ----------------------------------- #
+set_location_assignment PIN_B20 -to Seven_Segment_Digit_2[0] 
+set_location_assignment PIN_A20 -to Seven_Segment_Digit_2[1] 
+set_location_assignment PIN_B19 -to Seven_Segment_Digit_2[2] 
+set_location_assignment PIN_A21 -to Seven_Segment_Digit_2[3] 
+set_location_assignment PIN_B21 -to Seven_Segment_Digit_2[4] 
+set_location_assignment PIN_C22 -to Seven_Segment_Digit_2[5] 
+set_location_assignment PIN_B22 -to Seven_Segment_Digit_2[6] 
+set_location_assignment PIN_A19 -to Seven_Segment_Digit_2[7]
+# Display 3 ----------------------------------- #
+set_location_assignment PIN_F21 -to Seven_Segment_Digit_3[0] 
+set_location_assignment PIN_E22 -to Seven_Segment_Digit_3[1] 
+set_location_assignment PIN_E21 -to Seven_Segment_Digit_3[2] 
+set_location_assignment PIN_C19 -to Seven_Segment_Digit_3[3] 
+set_location_assignment PIN_C20 -to Seven_Segment_Digit_3[4] 
+set_location_assignment PIN_D19 -to Seven_Segment_Digit_3[5] 
+set_location_assignment PIN_E17 -to Seven_Segment_Digit_3[6] 
+set_location_assignment PIN_D22 -to Seven_Segment_Digit_3[7]
+# Display 4 ----------------------------------- #
+set_location_assignment PIN_F18 -to Seven_Segment_Digit_4[0] 
+set_location_assignment PIN_E20 -to Seven_Segment_Digit_4[1] 
+set_location_assignment PIN_E19 -to Seven_Segment_Digit_4[2] 
+set_location_assignment PIN_J18 -to Seven_Segment_Digit_4[3] 
+set_location_assignment PIN_H19 -to Seven_Segment_Digit_4[4] 
+set_location_assignment PIN_F19 -to Seven_Segment_Digit_4[5] 
+set_location_assignment PIN_F20 -to Seven_Segment_Digit_4[6] 
+set_location_assignment PIN_F17 -to Seven_Segment_Digit_4[7]
+# Display 5 ----------------------------------- #
+set_location_assignment PIN_J20 -to Seven_Segment_Digit_5[0] 
+set_location_assignment PIN_K20 -to Seven_Segment_Digit_5[1] 
+set_location_assignment PIN_L18 -to Seven_Segment_Digit_5[2] 
+set_location_assignment PIN_N18 -to Seven_Segment_Digit_5[3] 
+set_location_assignment PIN_M20 -to Seven_Segment_Digit_5[4] 
+set_location_assignment PIN_N19 -to Seven_Segment_Digit_5[5] 
+set_location_assignment PIN_N20 -to Seven_Segment_Digit_5[6] 
+set_location_assignment PIN_L19 -to Seven_Segment_Digit_5[7]
+# --------------------------------------------- #
+
+# --------------------------------------------- #
+# GPIO #
+# --------------------------------------------- #
+set_location_assignment PIN_V10 GPIO_Connection[0]
+set_location_assignment PIN_W10 GPIO_Connection[1]
+set_location_assignment PIN_V9 GPIO_Connection[2]
+set_location_assignment PIN_W9 GPIO_Connection[3]
+set_location_assignment PIN_V8 GPIO_Connection[4]
+set_location_assignment PIN_W8 GPIO_Connection[5]
+set_location_assignment PIN_V7 GPIO_Connection[6]
+set_location_assignment PIN_W7 GPIO_Connection[7]
+set_location_assignment PIN_W6 GPIO_Connection[8]
+set_location_assignment PIN_V5 GPIO_Connection[9]
+set_location_assignment PIN_W5 GPIO_Connection[10]
+set_location_assignment PIN_AA15 GPIO_Connection[11]
+set_location_assignment PIN_AA14 GPIO_Connection[12]
+set_location_assignment PIN_W13 GPIO_Connection[13]
+set_location_assignment PIN_W12 GPIO_Connection[14]
+set_location_assignment PIN_AB13 GPIO_Connection[15]
+set_location_assignment PIN_AB12 GPIO_Connection[16]
+set_location_assignment PIN_Y11 GPIO_Connection[17]
+set_location_assignment PIN_AB11 GPIO_Connection[18]
+set_location_assignment PIN_W11 GPIO_Connection[19]
+set_location_assignment PIN_AB10 GPIO_Connection[20]
+set_location_assignment PIN_AA10 GPIO_Connection[21]
+set_location_assignment PIN_AA9 GPIO_Connection[22]
+set_location_assignment PIN_Y8 GPIO_Connection[23]
+set_location_assignment PIN_AA8 GPIO_Connection[24]
+set_location_assignment PIN_Y7 GPIO_Connection[25]
+set_location_assignment PIN_AA7 GPIO_Connection[26]
+set_location_assignment PIN_Y6 GPIO_Connection[27]
+set_location_assignment PIN_AA6 GPIO_Connection[28]
+set_location_assignment PIN_Y5 GPIO_Connection[29]
+set_location_assignment PIN_AA5 GPIO_Connection[30]
+set_location_assignment PIN_Y4 GPIO_Connection[31]
+set_location_assignment PIN_AB3 GPIO_Connection[32]
+set_location_assignment PIN_Y3 GPIO_Connection[33]
+set_location_assignment PIN_AB2 GPIO_Connection[34]
+set_location_assignment PIN_AA2 GPIO_Connection[35]
+# --------------------------------------------- #
+
+# --------------------------------------------- #
+# SRAM #
+# --------------------------------------------- #
+set_location_assignment PIN_U17 SDRAM_Address[0]
+set_location_assignment PIN_W19 SDRAM_Address[1]
+set_location_assignment PIN_V18 SDRAM_Address[2]
+set_location_assignment PIN_U18 SDRAM_Address[3]
+set_location_assignment PIN_U19 SDRAM_Address[4]
+set_location_assignment PIN_T18 SDRAM_Address[5]
+set_location_assignment PIN_T19 SDRAM_Address[6]
+set_location_assignment PIN_R18 SDRAM_Address[7]
+set_location_assignment PIN_P18 SDRAM_Address[8]
+set_location_assignment PIN_P19 SDRAM_Address[9]
+set_location_assignment PIN_T20 SDRAM_Address[10]
+set_location_assignment PIN_P20 SDRAM_Address[11]
+set_location_assignment PIN_R20 SDRAM_Address[12]
+set_location_assignment PIN_Y21 SDRAM_Data[0]
+set_location_assignment PIN_Y20 SDRAM_Data[1]
+set_location_assignment PIN_AA2 SDRAM_Data[2]
+set_location_assignment PIN_AA2 SDRAM_Data[3]
+set_location_assignment PIN_Y22 SDRAM_Data[4]
+set_location_assignment PIN_W22 SDRAM_Data[5]
+set_location_assignment PIN_W20 SDRAM_Data[6]
+set_location_assignment PIN_V21 SDRAM_Data[7]
+set_location_assignment PIN_P21 SDRAM_Data[8]
+set_location_assignment PIN_J22 SDRAM_Data[9]
+set_location_assignment PIN_H21 SDRAM_Data[10]
+set_location_assignment PIN_H22 SDRAM_Data[11]
+set_location_assignment PIN_G22 SDRAM_Data[12]
+set_location_assignment PIN_G20 SDRAM_Data[13]
+set_location_assignment PIN_G19 SDRAM_Data[14]
+set_location_assignment PIN_F22 SDRAM_Data[15]
+set_location_assignment PIN_T21 SDRAM_Bank_Address[0]
+set_location_assignment PIN_T22 SDRAM_Bank_Address[1]
+set_location_assignment PIN_V22 SDRAM_byte_Data_Mask[0]
+set_location_assignment PIN_J21 SDRAM_byte_Data_Mask[1]
+set_location_assignment PIN_U22 SDRAM_Row Address Strobe
+set_location_assignment PIN_U21 SDRAM_Column_Address_Strobe
+set_location_assignment PIN_N22 SDRAM_Clock_Enable
+set_location_assignment PIN_L14 SDRAM_Clock
+set_location_assignment PIN_V20 SDRAM_Write_Enable
+set_location_assignment PIN_U20 SDRAM_Chip_Select
+# --------------------------------------------- #
