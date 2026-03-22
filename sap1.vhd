@@ -3,10 +3,11 @@ use ieee.std_logic_1164.all;
 
 entity sap1 is
     port (
-        clk: in std_logic;
+        clk_in: in std_logic;
         bcd0, bcd1, bcd2: out std_logic_vector(3 downto 0);
-        RAM_PROGRAM_DATA(7 downto 0);
+        RAM_PROGRAM_DATA: in std_logic_vector(7 downto 0);
         -- SAP signals in:
+	    HALT: in std_logic;	    -- Stop
         -- Program Counter (PC)
         CO: in std_logic;       -- Program counter out
         J: in std_logic;        -- Jump (program counter in)
@@ -38,7 +39,7 @@ end entity sap1;
 architecture bh of sap1 is
 
     signal global_clk: std_logic := '0';
-    signal main_bus: std_logic_vector(7 downto 0) := "00000000"
+    signal main_bus: std_logic_vector(7 downto 0) := "00000000";
 
     component regs is
         generic (
@@ -69,20 +70,9 @@ architecture bh of sap1 is
         );
     end component program_counter;
 
-    component ram is
-        port (
-            clk      : in  std_logic;
-            WE       : in  std_logic;
-            OE       : in  std_logic;
-            addr     : in  std_logic_vector(3 downto 0);
-            data_in  : in  std_logic_vector(7 downto 0);
-            data_out : out std_logic_vector(7 downto 0)
-        );
-    end component ram;
-
     component alu is
         generic (
-            bits := 8
+            bits: integer := 8
         );
         port (
             A, B    : in  std_logic_vector(bits - 1 downto 0);
@@ -94,15 +84,41 @@ architecture bh of sap1 is
 
     component output is
         port (
-            bin: in std_logic(7 downto 0);
+            bin: in std_logic_vector(7 downto 0);
             OI: in std_logic;
             bcd0, bcd1, bcd2: out std_logic_vector(3 downto 0)
         );
     end component output;
+	 
+	 component ram_ip is
+		port
+		(
+			address		: in STD_LOGIC_VECTOR (7 downto 0);
+			clock		: in STD_LOGIC  := '1';
+			data		: in STD_LOGIC_VECTOR (7 downto 0);
+			wren		: in STD_LOGIC ;
+			q		: out STD_LOGIC_VECTOR (7 downto 0)
+		);
+	end component ram_ip;
+
+    component ram is
+        port (
+            clk      : in  std_logic;
+            WE       : in  std_logic;
+            OE       : in  std_logic;
+            addr     : in  std_logic_vector(3 downto 0);
+            data_in  : in  std_logic_vector(7 downto 0);
+            data_out : out std_logic_vector(7 downto 0)
+        );
+    end component ram;
 
     signal PC_DATA, MAR_DATA: std_logic_vector(3 downto 0);
     signal A_DATA, B_DATA, ALU_DATA, RAM_DATA, IR_DATA: std_logic_vector(7 downto 0);
+	 
+	signal clk: std_logic;
 begin
+
+	clk <= clk_in and not HALT;
 
     PC: program_counter
     generic map(
@@ -188,6 +204,15 @@ begin
         data_out => RAM_DATA
     );
 
+    -- ram_ip_inst : ram_ip 
+    -- port map (
+	-- 	clock	 => clk,
+	-- 	wren	 => RI,
+	-- 	address	 => "0000" & MAR_DATA,
+	-- 	data	 => RAM_PROGRAM_DATA,
+	-- 	q	 => RAM_DATA
+	-- );
+
     IR: regs
     generic map(
         8
@@ -208,6 +233,6 @@ begin
                 ALU_DATA when EO = '1' else
                 RAM_DATA when RO = '1' else
                 ("0000" & IR_DATA(3 downto 0)) when IO = '1' else
-                "00000000"
+                "00000000";
 
 end architecture bh;

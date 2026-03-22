@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity output is
     port (
-        bin: in std_logic(7 downto 0);
+        bin: in std_logic_vector(7 downto 0);
         OI: in std_logic;
         bcd0, bcd1, bcd2: out std_logic_vector(3 downto 0)
     );

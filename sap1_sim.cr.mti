@@ -1,0 +1,89 @@
+C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/seg7_decoder.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\juanb\OneDrive\Escritorio\program\vhdl\sap1\seg7_decoder.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity seg7_decoder
+-- Compiling architecture bh of seg7_decoder
+
+} {} {}} C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ring_counter.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ring_counter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ring_counter
+-- Compiling architecture bh of ring_counter
+** Warning: C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ring_counter.vhd(21): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
+
+} {} {}} C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/program_counter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/program_counter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity program_counter
+-- Compiling architecture bh of program_counter
+
+} {} {}} C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ram_ip.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ram_ip.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity ram_ip
+-- Compiling architecture SYN of ram_ip
+
+} {} {}} C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ram.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ram.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ram
+-- Compiling architecture bh of ram
+
+} {} {}} C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/clock.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/clock.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity clock
+-- Compiling architecture bh of clock
+
+} {} {}} C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/bin2bcd.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/bin2bcd.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity bin2bcd
+-- Compiling architecture bh of bin2bcd
+
+} {} {}} C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/register.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/register.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity regs
+-- Compiling architecture bh of regs
+
+} {} {}} C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1_tb.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1_tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sap1_tb
+-- Compiling architecture tb of sap1_tb
+-- Loading entity sap1
+
+} {} {}} C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/alu.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/alu.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity alu
+-- Compiling architecture bh of alu
+
+} {} {}}

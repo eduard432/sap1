@@ -1,0 +1,475 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+Ealu
+Z0 w1774214819
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 32
+Z4 dC:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1
+Z5 8C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/alu.vhd
+Z6 FC:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/alu.vhd
+l0
+L5 1
+VZ4_Q0M0PZe_X@dUSeUce<0
+!s100 CEgi`nDa5KmkAP`:FTIF60
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1774218759
+!i10b 1
+Z9 !s108 1774218759.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/alu.vhd|
+Z11 !s107 C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/alu.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abh
+R1
+R2
+R3
+DEx4 work 3 alu 0 22 Z4_Q0M0PZe_X@dUSeUce<0
+!i122 32
+l18
+L17 21
+Vb?7o^T7IPjd93W9hXlZij1
+!s100 2dQa_n7z^f4zQ2gz?OC5F1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ebin2bcd
+Z14 w1774211492
+R1
+R2
+R3
+!i122 33
+R4
+Z15 8C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/bin2bcd.vhd
+Z16 FC:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/bin2bcd.vhd
+l0
+L5 1
+VdiT9K_9IHAC0G22lZgkk62
+!s100 BOoGIdXCn6[^Y>gAk;jfY1
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/bin2bcd.vhd|
+Z18 !s107 C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/bin2bcd.vhd|
+!i113 1
+R12
+R13
+Abh
+R1
+R2
+R3
+DEx4 work 7 bin2bcd 0 22 diT9K_9IHAC0G22lZgkk62
+!i122 33
+l15
+L14 42
+VUb5BA]W@0Kn2COKB_Vd883
+!s100 EA2>SJ`;hO]S10QSHD<Bf2
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Eclock
+Z19 w1773880592
+R2
+R3
+!i122 34
+R4
+Z20 8C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/clock.vhd
+Z21 FC:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/clock.vhd
+l0
+L4 1
+VIg9lR[cWmEj=GEcUF9;8N3
+!s100 Z2gF32ea4UcTzcHH7m6zC2
+R7
+32
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/clock.vhd|
+Z23 !s107 C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/clock.vhd|
+!i113 1
+R12
+R13
+Abh
+R2
+R3
+DEx4 work 5 clock 0 22 Ig9lR[cWmEj=GEcUF9;8N3
+!i122 34
+l20
+L17 22
+V0IT6@Hd[CE_3@X=;DXJA_0
+!s100 bMm18AG=X?>^::2@UQkk`1
+R7
+32
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+R13
+Eprogram_counter
+Z24 w1774212360
+Z25 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z26 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
+R3
+!i122 35
+R4
+Z27 8C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/program_counter.vhd
+Z28 FC:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/program_counter.vhd
+l0
+L5 1
+V6AzS7=hmb<KRbm:77bI^`1
+!s100 DHg[KJ>c4n0zW7M:8h8lE0
+R7
+32
+Z29 !s110 1774218760
+!i10b 1
+Z30 !s108 1774218760.000000
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/program_counter.vhd|
+Z32 !s107 C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/program_counter.vhd|
+!i113 1
+R12
+R13
+Abh
+R25
+R26
+R2
+R3
+DEx4 work 15 program_counter 0 22 6AzS7=hmb<KRbm:77bI^`1
+!i122 35
+l22
+L20 18
+V^4geAJ;o0TZPEK_7QF66l3
+!s100 Cm6QfY6[1F1LfJZXg]Uaf0
+R7
+32
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 1
+R12
+R13
+Eram
+Z33 w1774216107
+R1
+R2
+R3
+!i122 36
+R4
+Z34 8C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ram.vhd
+Z35 FC:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ram.vhd
+l0
+L5 1
+Vig?NSV2URBiS8:lB0dV5h0
+!s100 PXX?5iA9P;cElgi?^o5]>3
+R7
+32
+R29
+!i10b 1
+R30
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ram.vhd|
+Z37 !s107 C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ram.vhd|
+!i113 1
+R12
+R13
+Abh
+R1
+R2
+R3
+DEx4 work 3 ram 0 22 ig?NSV2URBiS8:lB0dV5h0
+!i122 36
+l19
+L16 17
+VA8o;DfTkjCdL9z`=iB:5=3
+!s100 `916c7X84QAle;i`<^VTW2
+R7
+32
+R29
+!i10b 1
+R30
+R36
+R37
+!i113 1
+R12
+R13
+Eram_ip
+Z38 w1774216650
+Z39 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+R2
+R3
+!i122 37
+R4
+Z40 8C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ram_ip.vhd
+Z41 FC:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ram_ip.vhd
+l0
+L43 1
+V69E8_BMhUUYSN1<0hi0@D1
+!s100 Uk4oYIfY8BU2X>I>g2aOF3
+R7
+32
+R29
+!i10b 1
+R30
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ram_ip.vhd|
+Z43 !s107 C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ram_ip.vhd|
+!i113 1
+R12
+R13
+Asyn
+R39
+R2
+R3
+DEx4 work 6 ram_ip 0 22 69E8_BMhUUYSN1<0hi0@D1
+!i122 37
+l59
+L55 35
+Vam><jnn0H_I8e68@Pg=HH1
+!s100 oi=[neSaW?n1Al_;A;1`^1
+R7
+32
+R29
+!i10b 1
+R30
+R42
+R43
+!i113 1
+R12
+R13
+Eregs
+Z44 w1774212344
+R2
+R3
+!i122 38
+R4
+Z45 8C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/register.vhd
+Z46 FC:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/register.vhd
+l0
+L4 1
+VgYcN^6ME:GK`SmSPGFW2[0
+!s100 ZLODzg[o9^>6h3C08>YT23
+R7
+32
+R29
+!i10b 1
+R30
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/register.vhd|
+Z48 !s107 C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/register.vhd|
+!i113 1
+R12
+R13
+Abh
+R2
+R3
+DEx4 work 4 regs 0 22 gYcN^6ME:GK`SmSPGFW2[0
+!i122 38
+l20
+L18 18
+VR;]z=i1i1hMDYJ3YJk7Tn3
+!s100 6@YD=iDdD:l5kVC>Z@m`C3
+R7
+32
+R29
+!i10b 1
+R30
+R47
+R48
+!i113 1
+R12
+R13
+Ering_counter
+Z49 w1773843682
+R2
+R3
+!i122 39
+R4
+Z50 8C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ring_counter.vhd
+Z51 FC:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ring_counter.vhd
+l0
+L4 1
+VJkY9Db:dJC:MAE@R?^12L3
+!s100 [od`DH4EX7ZT?`EV:6AT71
+R7
+32
+R29
+!i10b 1
+R30
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ring_counter.vhd|
+Z53 !s107 C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/ring_counter.vhd|
+!i113 1
+R12
+R13
+Abh
+R2
+R3
+DEx4 work 12 ring_counter 0 22 JkY9Db:dJC:MAE@R?^12L3
+!i122 39
+l17
+L15 14
+VYJ?VF5mHo3hXXZ8J=1N]I3
+!s100 YzXV[^=]SE7@A`O:PS?MJ0
+R7
+32
+R29
+!i10b 1
+R30
+R52
+R53
+!i113 1
+R12
+R13
+Esap1
+Z54 w1774218713
+R2
+R3
+!i122 40
+R4
+Z55 8C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1.vhd
+Z56 FC:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1.vhd
+l0
+L4 1
+VAj5[lQzC0m]Sc:nHE<TG[0
+!s100 n>OnMChZgOP5V?2?<HT4F2
+R7
+32
+R29
+!i10b 1
+R30
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1.vhd|
+Z58 !s107 C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1.vhd|
+!i113 1
+R12
+R13
+Abh
+R2
+R3
+Z59 DEx4 work 4 sap1 0 22 Aj5[lQzC0m]Sc:nHE<TG[0
+!i122 40
+l119
+L39 200
+VT`naLoo?bg3lMiiG8@JP90
+!s100 TlBaVSalCIO8@anF<W3V73
+R7
+32
+R29
+!i10b 1
+R30
+R57
+R58
+!i113 1
+R12
+R13
+Esap1_tb
+Z60 w1774218754
+R2
+R3
+!i122 42
+R4
+Z61 8C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1_tb.vhd
+Z62 FC:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1_tb.vhd
+l0
+L4 1
+VWQ14YNbn7VW=2?QiQ<n9U1
+!s100 `S9D2M>GB8D0LJ6WY0P710
+R7
+32
+Z63 !s110 1774218761
+!i10b 1
+Z64 !s108 1774218761.000000
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1_tb.vhd|
+!s107 C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1_tb.vhd|
+!i113 1
+R12
+R13
+Atb
+R59
+R2
+R3
+DEx4 work 7 sap1_tb 0 22 WQ14YNbn7VW=2?QiQ<n9U1
+!i122 42
+l28
+L7 128
+VYb=lZ[W6DT79FONMRX`:m0
+!s100 XIe:T6gClBB>?;@>BbCdE3
+R7
+32
+R63
+!i10b 1
+R64
+R65
+Z66 !s107 C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1_tb.vhd|
+!i113 1
+R12
+R13
+Eseg7_decoder
+Z67 w1773972631
+R2
+R3
+!i122 41
+R4
+Z68 8C:\Users\juanb\OneDrive\Escritorio\program\vhdl\sap1\seg7_decoder.vhd
+Z69 FC:\Users\juanb\OneDrive\Escritorio\program\vhdl\sap1\seg7_decoder.vhd
+l0
+L4 1
+V7VboiWS7RgY063H:K[e?i3
+!s100 l^f5Bn^zO7Ij4Z`N`k]c^0
+R7
+32
+R63
+!i10b 1
+R30
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\juanb\OneDrive\Escritorio\program\vhdl\sap1\seg7_decoder.vhd|
+Z71 !s107 C:\Users\juanb\OneDrive\Escritorio\program\vhdl\sap1\seg7_decoder.vhd|
+!i113 1
+R12
+R13
+Abh
+R2
+R3
+DEx4 work 12 seg7_decoder 0 22 7VboiWS7RgY063H:K[e?i3
+!i122 41
+l12
+L11 23
+V[L>BIL35hQH<kidJL_fU53
+!s100 H`EGHZ`;Q2kZaDmi8>32P2
+R7
+32
+R63
+!i10b 1
+R30
+R70
+R71
+!i113 1
+R12
+R13

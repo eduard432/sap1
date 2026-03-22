@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity output_disp is
     port (
-        bin: in std_logic(7 downto 0);
-        seg1, seg2, seg3: out std_logic_vector(6 downto 0)
+        bin: in std_logic_vector(7 downto 0);
+        seg0, seg1, seg2: out std_logic_vector(6 downto 0)
     );
 end entity output_disp;
 
@@ -26,7 +26,7 @@ architecture bh of output_disp is
         );
     end component seg7_decoder;
 
-    signal bcd2_tmp, bcd1_tmp, bcd0_tmp: std_logic_vector(3 downto );
+    signal bcd2_tmp, bcd1_tmp, bcd0_tmp: std_logic_vector(3 downto 0);
 begin
 
     CONVERTER: bin2bcd

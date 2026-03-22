@@ -14,8 +14,8 @@ entity ram is
 end entity ram;
 
 architecture bh of ram is
-    type ram_type is array (0 to 255) of std_logic_vector(7 downto 0);
-    signal RAM : ram_type := (others => (others => '0'));
+    type ram_type is array (0 to 15) of std_logic_vector(7 downto 0);
+    signal RAM : ram_type;
 begin
 
     process(clk)
@@ -24,8 +24,6 @@ begin
             if WE = '1' then
                 RAM(to_integer(unsigned(addr))) <= data_in;
             end if;
-
-            data_out <= RAM(to_integer(unsigned(addr)));
         end if;
     end process;
 

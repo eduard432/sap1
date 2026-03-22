@@ -1,0 +1,113 @@
+# Compile of alu.vhd was successful.
+# Compile of bin2bcd.vhd was successful.
+# Compile of clock.vhd was successful.
+# Compile of program_counter.vhd was successful.
+# Compile of ram.vhd was successful.
+# Compile of ram_ip.vhd was successful.
+# Compile of ram_ip_inst.vhd failed with 1 errors.
+# Compile of register.vhd was successful.
+# Compile of ring_counter.vhd was successful with warnings.
+# Compile of sap1.vhd was successful.
+# Compile of seg7_decoder.vhd was successful.
+# 11 compiles, 1 failed with 1 error.
+# can't read "Startup(-L)": no such element in array
+# Load canceled
+add wave -position insertpoint 8
+# Compile of alu.vhd was successful.
+# Compile of bin2bcd.vhd was successful.
+# Compile of clock.vhd was successful.
+# Compile of program_counter.vhd was successful.
+# Compile of ram.vhd was successful.
+# Compile of ram_ip.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of ring_counter.vhd was successful with warnings.
+# Compile of sap1.vhd was successful.
+# Compile of seg7_decoder.vhd was successful.
+# Compile of sap1_tb.vhd failed with 1 errors.
+# 11 compiles, 1 failed with 1 error.
+# Compile of alu.vhd was successful.
+# Compile of bin2bcd.vhd was successful.
+# Compile of clock.vhd was successful.
+# Compile of program_counter.vhd was successful.
+# Compile of ram.vhd was successful.
+# Compile of ram_ip.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of ring_counter.vhd was successful with warnings.
+# Compile of sap1.vhd was successful.
+# Compile of seg7_decoder.vhd was successful.
+# Compile of sap1_tb.vhd failed with 1 errors.
+# 11 compiles, 1 failed with 1 error.
+# Compile of alu.vhd was successful.
+# Compile of bin2bcd.vhd was successful.
+# Compile of clock.vhd was successful.
+# Compile of program_counter.vhd was successful.
+# Compile of ram.vhd was successful.
+# Compile of ram_ip.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of ring_counter.vhd was successful with warnings.
+# Compile of sap1.vhd was successful.
+# Compile of seg7_decoder.vhd was successful.
+# Compile of sap1_tb.vhd was successful.
+# 11 compiles, 0 failed with no errors.
+# can't read "Startup(-L)": no such element in array
+# Load canceled
+vsim work.sap1_tb
+# vsim work.sap1_tb 
+# Start time: 16:33:45 on Mar 22,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.sap1_tb(tb)
+# Loading work.sap1(bh)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.program_counter(bh)
+# Loading work.regs(bh)
+# Loading ieee.numeric_std(body)
+# Loading work.alu(bh)
+# ** Warning: (vsim-3473) Component instance "OUT_REGISTER : output" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /sap1_tb/DUT File: C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1.vhd
+# Loading work.ram(bh)
+# ** Warning: (vsim-8684) No drivers exist on out port /sap1_tb/DUT/bcd0, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /sap1_tb/bcd0.
+# ** Warning: (vsim-8684) No drivers exist on out port /sap1_tb/DUT/bcd1, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /sap1_tb/bcd1.
+# ** Warning: (vsim-8684) No drivers exist on out port /sap1_tb/DUT/bcd2, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /sap1_tb/bcd2.
+vsim work.sap1_tb
+# End time: 16:35:47 on Mar 22,2026, Elapsed time: 0:02:02
+# Errors: 0, Warnings: 14
+# vsim work.sap1_tb 
+# Start time: 16:35:47 on Mar 22,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.sap1_tb(tb)
+# Loading work.sap1(bh)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.program_counter(bh)
+# Loading work.regs(bh)
+# Loading ieee.numeric_std(body)
+# Loading work.alu(bh)
+# ** Warning: (vsim-3473) Component instance "OUT_REGISTER : output" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /sap1_tb/DUT File: C:/Users/juanb/OneDrive/Escritorio/program/vhdl/sap1/sap1.vhd
+# Loading work.ram(bh)
+# ** Warning: (vsim-8684) No drivers exist on out port /sap1_tb/DUT/bcd0, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /sap1_tb/bcd0.
+# ** Warning: (vsim-8684) No drivers exist on out port /sap1_tb/DUT/bcd1, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /sap1_tb/bcd1.
+# ** Warning: (vsim-8684) No drivers exist on out port /sap1_tb/DUT/bcd2, and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /sap1_tb/bcd2.
+add wave -r *
+run 200 ns
+wave zoom full
+# {0 ps} {210 ns}
+# End time: 16:37:56 on Mar 22,2026, Elapsed time: 0:02:09
+# Errors: 0, Warnings: 5

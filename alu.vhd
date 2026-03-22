@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity alu is
     generic (
-        bits := 8
+        bits: integer := 8
     );
     port (
         A, B    : in  std_logic_vector(bits - 1 downto 0);
