@@ -7,7 +7,7 @@ entity ram is
         clk      : in  std_logic;
         WE       : in  std_logic;
         OE       : in  std_logic;
-        addr     : in  std_logic_vector(7 downto 0);
+        addr     : in  std_logic_vector(3 downto 0);
         data_in  : in  std_logic_vector(7 downto 0);
         data_out : out std_logic_vector(7 downto 0)
     );
@@ -29,6 +29,6 @@ begin
         end if;
     end process;
 
-    data_out <= RAM(to_integer(unsigned(addr))) when OE = '1' else (others => 'Z');
+    data_out <= RAM(to_integer(unsigned(addr))) when OE = '1' else (others => '0');
 
 end architecture;

@@ -30,6 +30,6 @@ begin
         end if;
     end process;
 
-    Q <= Q_temp when OE = '1' else (others => 'Z');
+    Q <= Q_temp when OE = '1' else (others => '0');
 
 end architecture;

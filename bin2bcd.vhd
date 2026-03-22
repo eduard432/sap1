@@ -4,54 +4,51 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity bin2bcd is
     port(
-        bin  : in  std_logic_vector(6 downto 0);
+        bin  : in  std_logic_vector(7 downto 0);
         bcd2 : out std_logic_vector(3 downto 0); -- centenas
         bcd1 : out std_logic_vector(3 downto 0); -- decenas
         bcd0 : out std_logic_vector(3 downto 0)  -- unidades
     );
-end entity bin2bcd;
+end entity;
 
 architecture bh of bin2bcd is
 begin
 
 process(bin)
-
-    variable value : integer range 0 to 127;
-    variable hundreds : integer range 0 to 1;
-    variable tens : integer range 0 to 9;
-    variable ones : integer range 0 to 9;
-
+    variable shift_reg : std_logic_vector(19 downto 0); 
+    -- [19:16]=centenas, [15:12]=decenas, [11:8]=unidades, [7:0]=binario
+    variable i : integer;
 begin
 
-    value := to_integer(unsigned(bin));
+    -- Inicializar
+    shift_reg := (others => '0');
+    shift_reg(7 downto 0) := bin;
 
-    -- Centenas
-    if value >= 100 then
-        hundreds := 1;
-        value := value - 100;
-    else
-        hundreds := 0;
-    end if;
+    -- Double Dabble (8 iteraciones)
+    for i in 0 to 7 loop
+        
+        -- Ajuste BCD (add 3 si >= 5)
+        if unsigned(shift_reg(11 downto 8)) >= 5 then
+            shift_reg(11 downto 8) := std_logic_vector(unsigned(shift_reg(11 downto 8)) + 3);
+        end if;
 
-    -- Decenas
-    if value >= 90 then tens := 9; value := value - 90;
-    elsif value >= 80 then tens := 8; value := value - 80;
-    elsif value >= 70 then tens := 7; value := value - 70;
-    elsif value >= 60 then tens := 6; value := value - 60;
-    elsif value >= 50 then tens := 5; value := value - 50;
-    elsif value >= 40 then tens := 4; value := value - 40;
-    elsif value >= 30 then tens := 3; value := value - 30;
-    elsif value >= 20 then tens := 2; value := value - 20;
-    elsif value >= 10 then tens := 1; value := value - 10;
-    else tens := 0;
-    end if;
+        if unsigned(shift_reg(15 downto 12)) >= 5 then
+            shift_reg(15 downto 12) := std_logic_vector(unsigned(shift_reg(15 downto 12)) + 3);
+        end if;
 
-    -- Unidades
-    ones := value;
+        if unsigned(shift_reg(19 downto 16)) >= 5 then
+            shift_reg(19 downto 16) := std_logic_vector(unsigned(shift_reg(19 downto 16)) + 3);
+        end if;
 
-    bcd2 <= std_logic_vector(to_unsigned(hundreds,4));
-    bcd1 <= std_logic_vector(to_unsigned(tens,4));
-    bcd0 <= std_logic_vector(to_unsigned(ones,4));
+        -- Shift a la izquierda
+        shift_reg := shift_reg(18 downto 0) & '0';
+
+    end loop;
+
+    -- Salidas
+    bcd2 <= shift_reg(19 downto 16);
+    bcd1 <= shift_reg(15 downto 12);
+    bcd0 <= shift_reg(11 downto 8);
 
 end process;
 

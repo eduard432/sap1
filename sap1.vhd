@@ -3,10 +3,9 @@ use ieee.std_logic_1164.all;
 
 entity sap1 is
     port (
-        -- Board signals:
         clk: in std_logic;
-        clk_out: out std_logic;
-        seg1, seg2, seg3: out std_logic_vector(6 downto 0)
+        bcd0, bcd1, bcd2: out std_logic_vector(3 downto 0);
+        RAM_PROGRAM_DATA(7 downto 0);
         -- SAP signals in:
         -- Program Counter (PC)
         CO: in std_logic;       -- Program counter out
@@ -31,27 +30,15 @@ entity sap1 is
         RO: in std_logic;       -- RAN out
         -- IR (Instruction Register)
         II: in std_logic;       -- Instruction Register in
-        IO: in std_logic;       -- Instruction Register out
+        IO: in std_logic        -- Instruction Register out
 
     );
 end entity sap1;
 
 architecture bh of sap1 is
-    component clock is
-        generic (
-            pulse: integer := 25000000  -- 1Hz
-        );
-        port (
-            clk: in std_logic;
-            manual_clk: in std_logic;
-            sel: in std_logic;
-            HLT: in std_logic;
-            clk_out: out std_logic
-        );
-    end component clock;
 
     signal global_clk: std_logic := '0';
-    signal main_bus: 
+    signal main_bus: std_logic_vector(7 downto 0) := "00000000"
 
     component regs is
         generic (
@@ -85,19 +72,13 @@ architecture bh of sap1 is
     component ram is
         port (
             clk      : in  std_logic;
-            we       : in  std_logic;
-            addr     : in  std_logic_vector(7 downto 0);
+            WE       : in  std_logic;
+            OE       : in  std_logic;
+            addr     : in  std_logic_vector(3 downto 0);
             data_in  : in  std_logic_vector(7 downto 0);
             data_out : out std_logic_vector(7 downto 0)
         );
     end component ram;
-
-    component output is
-        port (
-            bin: in std_logic(7 downto 0);
-            seg1, seg2, seg3: out std_logic_vector(6 downto 0)
-        );
-    end component output;
 
     component alu is
         generic (
@@ -111,34 +92,30 @@ architecture bh of sap1 is
         );
     end component alu;
 
-    signal temp_out_leds: std_logic_vector(7 downto 0);
-begin
-    CL0: clock
-    generic map(
-        25000000        
-    )
-    port map (
-        clk => clk,
-        manual_clk => '0',
-        sel => '1',
-        HLT => '0',
-        clk_out => global_clk
-    );
+    component output is
+        port (
+            bin: in std_logic(7 downto 0);
+            OI: in std_logic;
+            bcd0, bcd1, bcd2: out std_logic_vector(3 downto 0)
+        );
+    end component output;
 
-    clk_out <= global_clk;
+    signal PC_DATA, MAR_DATA: std_logic_vector(3 downto 0);
+    signal A_DATA, B_DATA, ALU_DATA, RAM_DATA, IR_DATA: std_logic_vector(7 downto 0);
+begin
 
     PC: program_counter
     generic map(
         4
     )
     port map (
-        clk => global_clk,
-        reset => not reset,
+        clk => clk,
+        reset => '0',
         CE => CE,
         CO => CO,
-        load => not load,
-        data_in => data_in,
-        counter => counter
+        load => J,
+        data_in => main_bus(3 downto 0),
+        counter => PC_DATA
     );
 
     A_REGSITER: regs
@@ -146,13 +123,91 @@ begin
         8
     )
     port map (
-        clk => global_clk,
-        clear => not clear,
-        WE => not WE,
-        OE => OE,
-        I => I,
-        Q => temp_out_leds
+        clk => clk,
+        clear => '0',
+        WE => AI,
+        OE => AO,
+        I => main_bus,
+        Q => A_DATA
     );
     
-    -- out_leds <= temp_out_leds when sel_leds = '1' else I;
+    ALU0: alu
+    generic map (
+        8    
+    )
+    port map (
+        A => A_DATA,
+        B => B_DATA,
+        op => SU,
+        result => ALU_DATA,
+        carry => CY
+    );
+
+    B_REGSITER: regs
+    generic map (
+        8
+    )
+    port map (
+        clk => clk,
+        clear => '0',
+        WE => BI,
+        OE => BO,
+        I => main_bus,
+        Q => B_DATA
+    );
+
+    OUT_REGISTER: output
+    port map (
+        bin => main_bus,
+        OI => OI,
+        bcd0 => bcd0,
+        bcd1 => bcd1,
+        bcd2 => bcd2
+    );
+
+    MAR_REGISTER: regs
+    generic map(
+        4
+    )
+    port map (
+        clk => clk,
+        clear => '0',
+        WE => MI,
+        OE => '1',
+        I => main_bus(3 downto 0),
+        Q => MAR_DATA
+    );
+
+    RAM0: ram
+    port map (
+        clk => clk,
+        WE => RI,
+        OE => RO,
+        addr => MAR_DATA,
+        data_in => RAM_PROGRAM_DATA,
+        data_out => RAM_DATA
+    );
+
+    IR: regs
+    generic map(
+        8
+    )
+    port map (
+        clk => clk,
+        clear => '0',
+        WE => II,
+        OE => IO,
+        I => main_bus,
+        Q => IR_DATA
+    );
+
+    -- BUS MUX:
+    main_bus <= ("0000" & PC_DATA) when CO = '1' else
+                A_DATA when AO = '1' else
+                B_DATA when BO = '1' else
+                ALU_DATA when EO = '1' else
+                RAM_DATA when RO = '1' else
+                ("0000" & IR_DATA(3 downto 0)) when IO = '1' else
+                "00000000"
+
 end architecture bh;

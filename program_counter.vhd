@@ -33,5 +33,5 @@ begin
         end if;
     end process;
 
-    counter <= cnt_temp when CO = '1' else (others => 'Z');
+    counter <= cnt_temp when CO = '1' else (others => '0');
 end architecture bh;
