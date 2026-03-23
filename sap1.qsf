@@ -53,23 +53,42 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 
-set_location_assignment PIN_A8 -to counter[0]
-set_location_assignment PIN_A9 -to counter[1]
-set_location_assignment PIN_A10 -to counter[2]
-set_location_assignment PIN_B10 -to counter[3]
+set_location_assignment PIN_B11 -to clk_out
+set_location_assignment PIN_B8 -to reset_in
+set_location_assignment PIN_P11 -to clk_in
 
+set_location_assignment PIN_A8 -to bus_out[0]
+set_location_assignment PIN_A9 -to bus_out[1]
+set_location_assignment PIN_A10 -to bus_out[2]
+set_location_assignment PIN_B10 -to bus_out[3]
+set_location_assignment PIN_D13 -to bus_out[4]
+set_location_assignment PIN_C13 -to bus_out[5]
+set_location_assignment PIN_E14 -to bus_out[6]
+set_location_assignment PIN_D14 -to bus_out[7]
 
-set_location_assignment PIN_D13 -to clk_out
+set_location_assignment PIN_C14 -to seg0[0]
+set_location_assignment PIN_E15 -to seg0[1]
+set_location_assignment PIN_C15 -to seg0[2]
+set_location_assignment PIN_C16 -to seg0[3]
+set_location_assignment PIN_E16 -to seg0[4]
+set_location_assignment PIN_D17 -to seg0[5]
+set_location_assignment PIN_C17 -to seg0[6]
 
-set_location_assignment PIN_B8 -to reset
-set_location_assignment PIN_A7 -to load
+set_location_assignment PIN_C18 -to seg1[0]
+set_location_assignment PIN_D18 -to seg1[1]
+set_location_assignment PIN_E18 -to seg1[2]
+set_location_assignment PIN_B16 -to seg1[3]
+set_location_assignment PIN_A17 -to seg1[4]
+set_location_assignment PIN_A18 -to seg1[5]
+set_location_assignment PIN_B17 -to seg1[6]
 
-set_location_assignment PIN_C10 -to data_in[0]
-set_location_assignment PIN_C11 -to data_in[1]
-set_location_assignment PIN_D12 -to data_in[2]
-set_location_assignment PIN_C12 -to data_in[3]
-set_location_assignment PIN_A12 -to CE
-set_location_assignment PIN_B12 -to CO
+set_location_assignment PIN_B20 -to seg2[0]
+set_location_assignment PIN_A20 -to seg2[1]
+set_location_assignment PIN_B19 -to seg2[2]
+set_location_assignment PIN_A21 -to seg2[3]
+set_location_assignment PIN_B21 -to seg2[4]
+set_location_assignment PIN_C22 -to seg2[5]
+set_location_assignment PIN_B22 -to seg2[6]
 
 set_global_assignment -name VHDL_FILE seg7_decoder.vhd
 set_global_assignment -name VHDL_FILE ram.vhd
@@ -83,5 +102,14 @@ set_global_assignment -name VHDL_FILE clock.vhd
 set_global_assignment -name VHDL_FILE sap1.vhd
 set_global_assignment -name VHDL_FILE register.vhd
 set_global_assignment -name QIP_FILE ram_ip.qip
-set_location_assignment PIN_P11 -to clk_in
+set_global_assignment -name MIF_FILE sap1.mif
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name EXTERNAL_FLASH_FALLBACK_ADDRESS 00000000
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name INTERNAL_FLASH_UPDATE_MODE "SINGLE IMAGE WITH ERAM"
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
