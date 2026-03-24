@@ -4,14 +4,17 @@ use ieee.std_logic_1164.all;
 entity sap1 is
     port (
         clk_in: in std_logic;
-        clk_out: out std_logic;
         seg0, seg1, seg2: out std_logic_vector(6 downto 0);
         RAM_PROGRAM_DATA: in std_logic_vector(7 downto 0);
         reset_in: in std_logic;
-        bus_out: out std_logic_vector(7 downto 0);
         -- ALU:
-        CY: out std_logic      -- Carry bit (used with JC)
+        CY: out std_logic;      -- Carry bit (used with JC)
 
+        -- Debugging:
+        leds_out: out std_logic_vector(9 downto 0);
+        sel_leds: in std_logic_vector(2 downto 0);
+        sel_clk: in std_logic;
+        manual_clk: in std_logic
     );
 end entity sap1;
 
@@ -142,6 +145,8 @@ architecture bh of sap1 is
 	 
 	signal clk: std_logic;
     signal reset: std_logic;
+
+    signal tmp_out_leds: std_logic_vector(8 downto 0);
 begin
 
     reset <= not reset_in;
@@ -152,13 +157,11 @@ begin
     )
     port map (
         clk => clk_in,
-        manual_clk => '0',
-        sel => '1',
+        manual_clk => not manual_clk,
+        sel => sel_clk,
         HLT => HALT_s,
         clk_out => clk
     );
-
-    clk_out <= clk;
 
     CU: control_unit
     port map (
@@ -199,7 +202,7 @@ begin
         clk => clk,
         reset => reset,
         CE => CE_s,
-        CO => CO_s,
+        CO => '1',
         load => J_s,
         data_in => main_bus(3 downto 0),
         counter => PC_DATA
@@ -213,7 +216,7 @@ begin
         clk => clk,
         clear => reset,
         WE => AI_s,
-        OE => AO_s,
+        OE => '1',
         I => main_bus,
         Q => A_DATA
     );
@@ -238,7 +241,7 @@ begin
         clk => clk,
         clear => reset,
         WE => BI_s,
-        OE => BO_s,
+        OE => '1',
         I => main_bus,
         Q => B_DATA
     );
@@ -292,12 +295,10 @@ begin
         clk => clk,
         clear => reset,
         WE => II_s,
-        OE => IO_s,
+        OE => '1',
         I => main_bus,
         Q => IR_DATA
     );
-
-    bus_out <= main_bus;
 
     -- BUS MUX:
     main_bus <= ("0000" & PC_DATA) when CO_s = '1' else
@@ -307,5 +308,17 @@ begin
                 RAM_DATA when RO_s = '1' else
                 ("0000" & IR_DATA(3 downto 0)) when IO_s = '1' else
                 "00000000";
+
+    -- Debugging:
+    with sel_leds select
+        leds_out <= (clk & '0' & main_bus) when "000",
+                    (clk & '0' & A_DATA) when "001",
+                    (clk & '0' & B_DATA) when "010",
+                    (clk & '0' & ALU_DATA) when "011",
+                    (clk & '0' & RAM_DATA) when "100",
+                    (clk & '0' & IR_DATA) when "101",
+                    (clk & '0' & PC_DATA & MAR_DATA) when "110",
+                    "0000000000" when others;
+
 
 end architecture bh;

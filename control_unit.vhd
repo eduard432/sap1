@@ -49,6 +49,7 @@ begin
             end if; 
         end if;
     end process;
+    
 
     process(state)
     begin
